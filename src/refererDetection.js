@@ -8,7 +8,7 @@
  * Canonical URL which refers to an HTML link element, with the attribute of rel="canonical", found in the <head> element of your webpage
  */
 
-import { logWarn } from './utils';
+// import { logWarn } from './utils';
 
 export function detectReferer(win) {
   /**
@@ -139,13 +139,22 @@ export function detectReferer(win) {
             })
           }
           acc.push(refData);
+        // DIRTY HACK OVER HERE to enable HB monetization on webview mobile app - April 3th 2019
+        // Since on client's app is partially webview and native, we add to figure a way to serve HB through their webview with ads.txt being on //:file protocole (with referrer being localhost)
+        // The proposition was to serve the webview ads through an iframe with src as the main site because HB would have access to the ads.txt from that site.
+        // The problem with that technique is that prebid.js detects that we try to access a cross-domain iframe and sets the location and referrer to null and signals you are not at the top level
+        // When assigning those values to null, the key value for the HB bids aren't sent to AdManager resulting in a failure to deliver the needed ads.
+        // To solve this, since the bidders are a blacker box than prebid, we match the case when there is no iframe (normal execution).
+        // In a normal execution, acc = {referrer: a, location: a, isTop: true},
+        // so when the catch close swallows the DOMException about the cross-domain access, we simply negate that effect of the push and set the referrer (mobile app) equals to the location (main site)
+        // When doing that the key values are sent to AdManager and HB starts winning impressions
         } catch (e) {
-          acc.push({
-            referrer: null,
-            location: null,
-            isTop: (currentWindow == win.top)
-          });
-          logWarn('Trying to access cross domain iframe. Continuing without referrer and location');
+          acc = {
+            referrer: location,
+            location: location,
+            isTop: true,
+            canonicalUrl: null
+          }
         }
       } catch (e) {
         acc.push({

@@ -1,0 +1,14 @@
+[
+    "aolBidAdapter",
+    "adtelligentBidAdapter",
+    "appnexusBidAdapter",
+    "districtmDMXBidAdapter",
+    "ixBidAdapter",
+    "lockerdomeBidAdapter",
+    "openxBidAdapter",
+    "prebidServerBidAdapter",
+    "pulsepointBidAdapter",
+    "rhythmoneBidAdapter",
+    "dfpAdServerVideo",
+    "smartadserverBidAdapter"
+]
