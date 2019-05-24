@@ -7,8 +7,8 @@
     "lockerdomeBidAdapter",
     "openxBidAdapter",
     "prebidServerBidAdapter",
-    "pulsepointBidAdapter",
     "rhythmoneBidAdapter",
     "dfpAdServerVideo",
-    "smartadserverBidAdapter"
+    "smartadserverBidAdapter",
+    "currency"
 ]
