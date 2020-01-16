@@ -12,5 +12,7 @@
     "smartadserverBidAdapter",
     "pubmaticBidAdapter",
     "emx_digitalBidAdapter",
-    "currency"
+    "currency",
+    "consentManagement",
+    "consentManagementUsp",
 ]
