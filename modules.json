@@ -14,5 +14,6 @@
     "emx_digitalBidAdapter",
     "currency",
     "consentManagement",
-    "consentManagementUsp"
+    "consentManagementUsp",
+    "categoryTranslation"
 ]
