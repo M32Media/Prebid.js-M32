@@ -188,7 +188,11 @@ function newBid(serverBid, bidderRequest) {
 
 const getSync = (type, gdprConsent, uspConsent = '') => {
   const syncUrl = SYNC_URL;
+<<<<<<< HEAD
   let params = '&type=' + type + '&us_privacy=' + uspConsent;
+=======
+  let params = '?type=' + type + '&us_privacy=' + uspConsent;
+>>>>>>> 3.5.0
   if (gdprConsent && typeof gdprConsent.consentString === 'string') {
     if (typeof gdprConsent.gdprApplies === 'boolean') {
       params += `&gdpr=${Number(gdprConsent.gdprApplies)}&gdpr_consent=${gdprConsent.consentString}`;
