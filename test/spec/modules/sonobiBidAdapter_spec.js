@@ -298,18 +298,10 @@ describe('SonobiBidAdapter', function () {
       'refererInfo': {
         'numIframes': 0,
         'reachedTop': true,
-<<<<<<< HEAD
-        'referer': 'http://example.com',
-        'stack': ['http://example.com']
-      },
-      uspConsent: 'someCCPAString'
-
-=======
         'referer': 'https://example.com',
         'stack': ['https://example.com']
       },
       uspConsent: 'someCCPAString'
->>>>>>> 3.5.0
     };
     it('should include the digitrust id and keyv', () => {
       window.DigiTrust = {
@@ -496,23 +488,16 @@ describe('SonobiBidAdapter', function () {
       expect(bidRequests.data.userid).to.equal(undefined);
     });
 
-<<<<<<< HEAD
-=======
     it('should return a properly formatted request with keywrods included as a csv of strings', function() {
       const bidRequests = spec.buildRequests(bidRequest, bidderRequests);
       expect(bidRequests.data.kw).to.equal('sports,news,some_other_keyword');
     });
 
->>>>>>> 3.5.0
     it('should return a properly formatted request with us_privacy included', function() {
       const bidRequests = spec.buildRequests(bidRequest, bidderRequests);
       expect(bidRequests.data.us_privacy).to.equal('someCCPAString');
     });
-<<<<<<< HEAD
-  })
-=======
   });
->>>>>>> 3.5.0
 
   describe('.interpretResponse', function () {
     const bidRequests = {

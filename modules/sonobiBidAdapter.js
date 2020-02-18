@@ -128,15 +128,11 @@ export const spec = {
       payload.userid = JSON.stringify(validBidRequests[0].userId);
     }
 
-<<<<<<< HEAD
-=======
     let keywords = validBidRequests[0].params.keywords; // a CSV of keywords
 
     if (keywords) {
       payload.kw = keywords;
     }
-
->>>>>>> 3.5.0
     if (bidderRequest && bidderRequest.uspConsent) {
       payload.us_privacy = bidderRequest.uspConsent;
     }

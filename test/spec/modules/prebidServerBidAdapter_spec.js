@@ -1470,13 +1470,6 @@ describe('S2S Adapter', function () {
       expect(response).to.have.property('dealId', 'test-dealid');
     });
 
-<<<<<<< HEAD
-    it('should set the bidResponse currency to whats in the PBS response', function() {
-      server.respondWith(JSON.stringify(RESPONSE_OPENRTB));
-      let ortb2Config = utils.deepClone(CONFIG);
-      ortb2Config.endpoint = 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction';
-      config.setConfig({ s2sConfig: ortb2Config });
-=======
     it('should pass through default adserverTargeting if present in bidObject for video request', function () {
       config.setConfig({s2sConfig: CONFIG});
       const cacheResponse = utils.deepClone(RESPONSE_OPENRTB);
@@ -1503,7 +1496,6 @@ describe('S2S Adapter', function () {
 
     it('should set the bidResponse currency to whats in the PBS response', function() {
       server.respondWith(JSON.stringify(RESPONSE_OPENRTB));
->>>>>>> 3.5.0
       adapter.callBids(REQUEST, BID_REQUESTS, addBidResponse, done, ajax);
       server.respond();
       sinon.assert.calledOnce(addBidResponse);
@@ -1514,12 +1506,6 @@ describe('S2S Adapter', function () {
     it('should set the default bidResponse currency when not specified in OpenRTB', function() {
       let modifiedResponse = utils.deepClone(RESPONSE_OPENRTB);
       modifiedResponse.cur = '';
-<<<<<<< HEAD
-      let ortb2Config = utils.deepClone(CONFIG);
-      ortb2Config.endpoint = 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction';
-      config.setConfig({ s2sConfig: ortb2Config });
-=======
->>>>>>> 3.5.0
       server.respondWith(JSON.stringify(modifiedResponse));
       adapter.callBids(REQUEST, BID_REQUESTS, addBidResponse, done, ajax);
       server.respond();
@@ -1527,25 +1513,15 @@ describe('S2S Adapter', function () {
       const pbjsResponse = addBidResponse.firstCall.args[1];
       expect(pbjsResponse).to.have.property('currency', 'USD');
     });
-
-<<<<<<< HEAD
-    it('should pass through default adserverTargeting if present in bidObject', function () {
-      server.respondWith(JSON.stringify(RESPONSE));
-=======
     it('should pass through default adserverTargeting if present in bidObject for banner request', function () {
       const cacheResponse = utils.deepClone(RESPONSE_OPENRTB);
-
       const targetingTestData = {
         'foo': 'bar'
       };
-
       cacheResponse.seatbid.forEach(item => {
         item.bid[0].ext.prebid.targeting = targetingTestData
       });
-
       server.respondWith(JSON.stringify(cacheResponse));
-
->>>>>>> 3.5.0
       config.setConfig({ s2sConfig: CONFIG });
       adapter.callBids(REQUEST, BID_REQUESTS, addBidResponse, done, ajax);
       server.respond();

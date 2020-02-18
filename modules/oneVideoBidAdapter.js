@@ -244,10 +244,6 @@ function getRequestData(bid, consentData, bidRequest) {
         }
       };
     }
-<<<<<<< HEAD
-    // CCPA support
-=======
->>>>>>> 3.5.0
     if (bidRequest && bidRequest.uspConsent) {
       bidData.regs.ext.us_privacy = bidRequest.uspConsent
     }
