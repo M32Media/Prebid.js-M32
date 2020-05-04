@@ -15,5 +15,6 @@
     "currency",
     "consentManagement",
     "consentManagementUsp",
-    "categoryTranslation"
+    "categoryTranslation",
+    "schain"
 ]
