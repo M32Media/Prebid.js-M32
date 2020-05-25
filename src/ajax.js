@@ -65,9 +65,8 @@ export function ajaxBuilder(timeout = 3000, {request, done} = {}) {
           if (m32hb) {
             m32hb.prebid.timeoutBids.push(timeoutBidData);
           } else if (madops) {
-            madops.prebid.timeoutBids.puhs(timeoutBidData);
+            madops.prebid.timeoutBids.push(timeoutBidData);
           }
-          console.log(timeoutBidData);
           //// M32 - End ////
           utils.logError('  xhr timeout after ', x.timeout, 'ms');
         };
