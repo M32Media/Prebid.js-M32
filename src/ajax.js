@@ -62,11 +62,11 @@ export function ajaxBuilder(timeout = 3000, {request, done} = {}) {
             "data":data,
             "options":options
           }
-          if (m32hb) {
-            m32hb.prebid.timeoutBids.push(timeoutBidData);
-          } else if (madops) {
-            madops.prebid.timeoutBids.push(timeoutBidData);
-          }
+          // if (m32hb) {
+          //   m32hb.prebid.timeoutBids.push(timeoutBidData);
+          // } else if (madops) {
+          //   madops.prebid.timeoutBids.push(timeoutBidData);
+          // }
           //// M32 - End ////
           utils.logError('  xhr timeout after ', x.timeout, 'ms');
         };
