@@ -17,5 +17,6 @@
     "consentManagementUsp",
     "categoryTranslation",
     "schain",
-    "improvedigitalBidAdapter"
+    "improvedigitalBidAdapter",
+    "teadsBidAdapter"
 ]
