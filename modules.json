@@ -19,5 +19,6 @@
     "schain",
     "improvedigitalBidAdapter",
     "teadsBidAdapter",
-    "smilewantedBidAdapter"
+    "smilewantedBidAdapter",
+    "rubiconBidAdapter"
 ]
