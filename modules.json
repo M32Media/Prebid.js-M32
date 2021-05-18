@@ -20,5 +20,6 @@
     "improvedigitalBidAdapter",
     "teadsBidAdapter",
     "smilewantedBidAdapter",
-    "rubiconBidAdapter"
+    "rubiconBidAdapter",
+    "sharethroughBidAdapter"
 ]
