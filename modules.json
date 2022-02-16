@@ -5,7 +5,6 @@
     "districtmDMXBidAdapter",
     "ixBidAdapter",
     "openxBidAdapter",
-    "prebidServerBidAdapter",
     "dfpAdServerVideo",
     "smartadserverBidAdapter",
     "pubmaticBidAdapter",
