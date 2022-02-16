@@ -17,5 +17,6 @@
     "improvedigitalBidAdapter",
     "teadsBidAdapter",
     "rubiconBidAdapter",
-    "sharethroughBidAdapter"
+    "sharethroughBidAdapter",
+    "tripleliftBidAdapter.js"
 ]
