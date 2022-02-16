@@ -4,14 +4,11 @@
     "appnexusBidAdapter",
     "districtmDMXBidAdapter",
     "ixBidAdapter",
-    "lockerdomeBidAdapter",
     "openxBidAdapter",
     "prebidServerBidAdapter",
-    "rhythmoneBidAdapter",
     "dfpAdServerVideo",
     "smartadserverBidAdapter",
     "pubmaticBidAdapter",
-    "emx_digitalBidAdapter",
     "currency",
     "consentManagement",
     "consentManagementUsp",
@@ -19,7 +16,6 @@
     "schain",
     "improvedigitalBidAdapter",
     "teadsBidAdapter",
-    "smilewantedBidAdapter",
     "rubiconBidAdapter",
     "sharethroughBidAdapter"
 ]
