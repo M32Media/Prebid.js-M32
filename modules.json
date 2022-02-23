@@ -1,10 +1,8 @@
 [
     "aolBidAdapter",
-    "adtelligentBidAdapter",
     "appnexusBidAdapter",
     "districtmDMXBidAdapter",
     "ixBidAdapter",
-    "openxBidAdapter",
     "dfpAdServerVideo",
     "smartadserverBidAdapter",
     "pubmaticBidAdapter",
@@ -13,9 +11,10 @@
     "consentManagementUsp",
     "categoryTranslation",
     "schain",
-    "improvedigitalBidAdapter",
     "teadsBidAdapter",
     "rubiconBidAdapter",
     "sharethroughBidAdapter",
-    "tripleliftBidAdapter"
+    "tripleliftBidAdapter",
+    "userId",
+    "sharedIdSystem"
 ]
