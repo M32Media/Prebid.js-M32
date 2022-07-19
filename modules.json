@@ -16,5 +16,7 @@
     "oguryBidAdapter",
     "tripleliftBidAdapter",
     "userId",
-    "sharedIdSystem"
+    "sharedIdSystem",
+    "id5IdSystem",
+    "identityLinkIdSystem"
 ]
