@@ -258,18 +258,6 @@ describe('eids array generation for known sub-modules', function() {
     });
   });
 
-  it('NextRollId', function() {
-    const userId = {
-      nextrollId: 'some-random-id-value'
-    };
-    const newEids = createEidsArray(userId);
-    expect(newEids.length).to.equal(1);
-    expect(newEids[0]).to.deep.equal({
-      source: 'nextroll.com',
-      uids: [{id: 'some-random-id-value', atype: 1}]
-    });
-  });
-
   it('zeotapIdPlus', function() {
     const userId = {
       IDP: 'some-random-id-value'
@@ -338,6 +326,20 @@ describe('eids array generation for known sub-modules', function() {
       source: 'kpuid.com',
       uids: [{
         id: 'Sample_Token',
+        atype: 3
+      }]
+    });
+  });
+  it('tncid', function() {
+    const userId = {
+      tncid: 'TEST_TNCID'
+    };
+    const newEids = createEidsArray(userId);
+    expect(newEids.length).to.equal(1);
+    expect(newEids[0]).to.deep.equal({
+      source: 'thenewco.it',
+      uids: [{
+        id: 'TEST_TNCID',
         atype: 3
       }]
     });
@@ -425,8 +427,19 @@ describe('eids array generation for known sub-modules', function() {
       }]
     });
   });
+
+  it('cpexId', () => {
+    const id = 'some-random-id-value'
+    const userId = { cpexId: id };
+    const [eid] = createEidsArray(userId);
+    expect(eid).to.deep.equal({
+      source: 'czechadid.cz',
+      uids: [{ id: 'some-random-id-value', atype: 1 }]
+    });
+  });
 });
-describe('Negative case', function() {
+
+describe('Negative case', function () {
   it('eids array generation for UN-known sub-module', function() {
     // UnknownCommonId
     const userId = {
