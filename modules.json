@@ -18,5 +18,6 @@
     "userId",
     "sharedIdSystem",
     "id5IdSystem",
-    "identityLinkIdSystem"
+    "identityLinkIdSystem",
+    "atsAnalyticsAdapter"
 ]
