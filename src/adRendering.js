@@ -19,7 +19,10 @@ const {AD_RENDER_FAILED, AD_RENDER_SUCCEEDED, STALE_RENDER, BID_WON} = constants
  */
 export function emitAdRenderFail({ reason, message, bid, id }) {
   const data = { reason, message };
-  if (bid) data.bid = bid;
+  if (bid) {
+    data.bid = bid;
+    data.adId = bid.adId;
+  }
   if (id) data.adId = id;
 
   logError(`Error rendering ad (id: ${id}): ${message}`);
@@ -43,7 +46,7 @@ export function emitAdRenderSucceeded({ doc, bid, id }) {
   events.emit(AD_RENDER_SUCCEEDED, data);
 }
 
-export function handleRender(renderFn, {adId, options, bidResponse}) {
+export function handleRender(renderFn, {adId, options, bidResponse, doc}) {
   if (bidResponse == null) {
     emitAdRenderFail({
       reason: constants.AD_RENDER_FAILED_REASON.CANNOT_FIND_AD,
@@ -63,7 +66,8 @@ export function handleRender(renderFn, {adId, options, bidResponse}) {
     const {adId, ad, adUrl, width, height, renderer, cpm, originalCpm, mediaType} = bidResponse;
     // rendering for outstream safeframe
     if (isRendererRequired(renderer)) {
-      executeRenderer(renderer, bidResponse);
+      executeRenderer(renderer, bidResponse, doc);
+      emitAdRenderSucceeded({doc, bid: bidResponse, id: adId})
     } else if (adId) {
       if (mediaType === VIDEO) {
         emitAdRenderFail({
