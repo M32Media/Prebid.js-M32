@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /**
  * This module adds uid2 ID support to the User ID module
  * The {@link module:modules/userId} module is required.
@@ -69,12 +68,12 @@ export const uid2IdSubmodule = {
   /**
    * performs action to obtain id and return a value.
    * @function
-   * @param {SubmoduleConfig} [configparams]
+   * @param {SubmoduleConfig} config
    * @param {ConsentData|undefined} consentData
    * @returns {uid2Id}
    */
   getId(config, consentData) {
-    if (consentData?.gdprApplies === true) {
+    if (consentData?.gdpr?.gdprApplies === true) {
       _logWarn('UID2 is not intended for use where GDPR applies. The UID2 module will not run.');
       return;
     }
