@@ -1,0 +1,23 @@
+[
+    "appnexusBidAdapter",
+    "ixBidAdapter",
+    "smartadserverBidAdapter",
+    "pubmaticBidAdapter",
+    "currency",
+    "consentManagementTcf",
+    "consentManagementGpp",
+    "categoryTranslation",
+    "schain",
+    "teadsBidAdapter",
+    "rubiconBidAdapter",
+    "sharethroughBidAdapter",
+    "tripleliftBidAdapter",
+    "userId",
+    "sharedIdSystem",
+    "id5IdSystem",
+    "identityLinkIdSystem",
+    "atsAnalyticsAdapter",
+    "amxBidAdapter",
+    "amxIdSystem",
+    "medianetBidAdapter"
+]
