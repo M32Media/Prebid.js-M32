@@ -6,7 +6,6 @@
       "adtelligentIdSystem",
       "adqueryIdSystem",
       "amxIdSystem",
-      "britepoolIdSystem",
       "connectIdSystem",
       "czechAdIdSystem",
       "criteoIdSystem",
@@ -30,22 +29,26 @@
       "lockrAIMIdSystem",
       "lotamePanoramaIdSystem",
       "merkleIdSystem",
+      "mobkoiIdSystem",
       "mwOpenLinkIdSystem",
       "mygaruIdSystem",
       "naveggIdSystem",
       "netIdSystem",
       "novatiqIdSystem",
       "oneKeyIdSystem",
+      "openPairIdSystem",
       "operaadsIdSystem",
-      "parrableIdSystem",
+      "permutiveIdentityManagerIdSystem",
+      "pubmaticIdSystem",
       "pubProvidedIdSystem",
       "publinkIdSystem",
       "quantcastIdSystem",
+      "rewardedInterestIdSystem",
       "sharedIdSystem",
       "tapadIdSystem",
       "teadsIdSystem",
       "tncIdSystem",
-      "utiqSystem",
+      "utiqIdSystem",
       "utiqMtpIdSystem",
       "uid2IdSystem",
       "euidIdSystem",
@@ -56,12 +59,14 @@
     ],
     "adpod": [
       "freeWheelAdserverVideo",
-      "dfpAdServerVideo"
+      "dfpAdpod"
     ],
     "rtdModule": [
       "1plusXRtdProvider",
+      "51DegreesRtdProvider",
       "a1MediaRtdProvider",
       "aaxBlockmeterRtdProvider",
+      "adagioRtdProvider",
       "adlooxRtdProvider",
       "adnuntiusRtdProvider",
       "airgridRtdProvider",
@@ -81,6 +86,7 @@
       "greenbidsRtdProvider",
       "growthCodeRtdProvider",
       "hadronRtdProvider",
+      "humansecurityRtdProvider",
       "iasRtdProvider",
       "idWardRtdProvider",
       "imRtdProvider",
@@ -88,18 +94,24 @@
       "jwplayerRtdProvider",
       "medianetRtdProvider",
       "mgidRtdProvider",
+      "mobianRtdProvider",
       "neuwoRtdProvider",
       "oneKeyRtdProvider",
+      "optableRtdProvider",
       "optimeraRtdProvider",
       "oxxionRtdProvider",
       "permutiveRtdProvider",
+      "pubmaticRtdProvider",
       "pubxaiRtdProvider",
       "qortexRtdProvider",
       "reconciliationRtdProvider",
       "relevadRtdProvider",
+      "semantiqRtdProvider",
       "sirdataRtdProvider",
+      "symitriDapRtdProvider",
       "timeoutRtdProvider",
-      "weboramaRtdProvider"
+      "weboramaRtdProvider",
+      "wurflRtdProvider"
     ],
     "fpdModule": [
       "validationFpdModule",
@@ -107,10 +119,12 @@
     ],
     "videoModule": [
       "jwplayerVideoProvider",
-      "videojsVideoProvider"
+      "videojsVideoProvider",
+      "adplayerproVideoProvider"
     ],
     "paapi": [
-      "fledgeForGpt"
+      "paapiForGpt",
+      "topLevelPaapi"
     ]
   }
 }
