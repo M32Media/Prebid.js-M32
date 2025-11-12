@@ -20,5 +20,6 @@
     "atsAnalyticsAdapter",
     "amxBidAdapter",
     "amxIdSystem",
-    "medianetBidAdapter"
+    "medianetBidAdapter",
+    "oguryBidAdapter"
 ]
