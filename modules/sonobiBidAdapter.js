@@ -147,7 +147,6 @@ export const spec = {
     if (keywords) {
       payload.kw = keywords;
     }
-
     if (bidderRequest && bidderRequest.uspConsent) {
       payload.us_privacy = bidderRequest.uspConsent;
     }
