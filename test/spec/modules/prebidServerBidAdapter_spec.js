@@ -3282,18 +3282,14 @@ describe('S2S Adapter', function () {
       const pbjsResponse = addBidResponse.firstCall.args[1];
       expect(pbjsResponse).to.have.property('currency', 'USD');
     });
-
     it('should pass through default adserverTargeting if present in bidObject for banner request', function () {
       const cacheResponse = utils.deepClone(RESPONSE_OPENRTB);
-
       const targetingTestData = {
         'foo': 'bar'
       };
-
       cacheResponse.seatbid.forEach(item => {
         item.bid[0].ext.prebid.targeting = targetingTestData
       });
-
       config.setConfig({ s2sConfig: CONFIG });
       adapter.callBids(REQUEST, BID_REQUESTS, addBidResponse, done, ajax);
       server.requests[0].respond(200, {}, JSON.stringify(cacheResponse));
