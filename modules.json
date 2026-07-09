@@ -22,5 +22,6 @@
     "amxIdSystem",
     "medianetBidAdapter",
     "equativBidAdapter",
-    "oguryBidAdapter"
+    "oguryBidAdapter",
+    "seedtagBidAdapter"
 ]
